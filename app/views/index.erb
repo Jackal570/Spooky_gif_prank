@@ -4,22 +4,55 @@
   <title>Homepage</title>
   <!-- links to CSS stylesheet in the public directory -->
   <link rel="stylesheet" href="/css/index.css" >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("#peaceful").hide();
+    });
+    $("#hide-still").click(function(){
+        $("#peaceful").hide();
+    });
+    $("#hide-still").click(function( event ) {
+      $("#scary").show();
+    });
+    $("#hide").click(function( event ) {
+      $("#scary").show();
+    });
+    $('#hide').on('click', function() {
+      $('#scream').get(0).play();
+    });
+    $('#hide-still').on('click', function() {
+      $('#scream').get(0).play();
+    });
+});
+</script>
 </head>
 <body> 
 
   <div class="peaceful">
-    <!--<form method="POST" action="/status">-->
-    <!--  <input type="text" name="username" placeholder="Type your username">-->
-    <!--  <input type="text" name="status" placeholder="Type your status">-->
-    <!--  <input type="submit" value="Submit!">-->
-    <!--</form>-->
     <h1>Can you see the crocodile?</h1>
-    <audio controls autoplay>
-  <source src= type="audio/mpeg">
-</audio>
-    <img src="<%= @scare1.scare %>" style="width:1260px;height:525px;">
-  </div>
 
+    <p>This test is for your vision. Be sure the look closely at the screen to find it. HINT: It's near the middle of the screen.</p>
+    <p>Be sure to turn up the volume too. There is a hidden water splash sound so, it's like a vision test and a hearing test in one!</p>
+    <button id="hide">I FOUND IT!/I HEARD IT!</button>
+    <button id="hide-still">I CAN'T FIND IT!/I CAN'T HEAR IT!</button>
+    <img src="http://www.googida.com/art4ever/a0234/l01.jpg" style="width:1260px;height:420px;" id="peaceful">
+    <img src="<%= @scare1.scare %>" style="width:1260px;height:420px;" id="scary">
+     
+    <audio controls id="scream" src="http://soundfxcenter.com/video-games/mortal-kombat/8d82b5_Fatality_Scream_Sound_FX.mp3" type="audio/mpeg">
+    </audio>
+    <!--<input type="button" value="Start" id="start" />-->
+  
+  </div>
+   
+
+
+
+<script>
+  
+</script>
+    
 </body>
 </html>
 

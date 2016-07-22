@@ -15,7 +15,6 @@ class ScaryPic
     
     def scare
     @peaceful
-        sleep(2)
      @scary
     end
     

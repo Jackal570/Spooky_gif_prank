@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
   get '/' do 
     @peaceful= "http://www.googida.com/art4ever/a0234/l01.jpg"
     @scary=  "http://www.scaryforkids.com/pics/scary-video.jpg"
-    @scare1=ScaryPic.new(@peaceful, @scary)
+    @scare1= ScaryPic.new(@peaceful, @scary)
     erb :index
   end
   

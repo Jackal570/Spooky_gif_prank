@@ -1,0 +1,21 @@
+#scary {
+    display: none;
+}
+
+audio {
+    display: none;
+}
+
+body, html {
+    text-align: center;
+    color: white;
+    background-color: black;
+    
+}
+
+button {
+    margin-bottom: 0.5%;
+    background-color: black;
+    color: white;
+    border: 2px solid #FFFFFF;
+}
